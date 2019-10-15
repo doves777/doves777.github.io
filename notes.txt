@@ -1,10 +1,13 @@
-Tuvasa EDH 
+Tuvasa EDH
 
 38 lands
 8 accelerants
 
 bant colors (gw,uw,gu)
 
+*Cards I don't Own
+
+~~~~Mana Lands~~~~
 1 City of brass
 1 Ancient tomb *
 1 Reflecting pool *
@@ -29,6 +32,7 @@ bant colors (gw,uw,gu)
 1 Brushland *
 1 Yavimaya Coast
 
+~~~Utility Lands~~~
 1 Alchemst's Refuge *
 1 Field of the Dead
 1 Gavony Township
