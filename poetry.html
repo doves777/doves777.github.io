@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poems from the heart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/poetry.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <style>
+  body,h1 {font-family: "Montserrat", sans-serif}
+  img {margin-bottom: -7px}
+  .w3-row-padding img {margin-bottom: 12px}
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101654494-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-101654494-1');
+  </script>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+    <a href="photography/photography.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">(Not my)Photos</a>
+    <a href="blog.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Blog</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>Poems from the heart</b></h1>
+  <p><b>How life presents itself, one struggle at a time</b></p>
+  <p>Click on a photo to read a poem</p>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <!-- Page divided in 3rds from left to right -->
+  <div class="w3-third">
+    <img src="img/spinch.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spinch, is like pinch <br> Much profound, like the sun <br> whos rays of shine rain down on the earth, like tears <br> it cries as humans pollute its own home, like savages from old <br> to boycott this madness the sun removed the letter A, like from the alphabet <br> in order to reduce gs emissions, like all good suns should <br> crs cannot drive without gs">
+    <img src="photography/images/parallax3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Life is a quest<br>Of love<br>Of passion<br>Of Friendship<br>Success drives me<br>Failure pushes me far<br>Creating brings me life<br>I love myself<br>I love my work<br>I love my friends<br>....<br>Until I'm dead">
+  </div>
+  <div class="w3-third">
+    <img src="img/london.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="I don't know where I am going <br>I don't want to know where I am going<br>Life is a journey<br>No need to run<br>Slow and steady<br>It has just begun<br>Please take care of me<br>And let us go have some fun<br>I am only a suitcase<br>But I cherish my moments one by one<br>Love<br>Suitcase">
+    <img src="photography/images/p13.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="One for all <br>All for one<br>What heroes are suppose to be<br>Reality...<br>One for none<br>None for one">
+  </div>
+  <div class="w3-third">
+    <img src="photography/images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="This meeting<br>is absolutely<br>lovely today.<br>I need<br>a bee<br>hive because<br>of the<br>royal jelly<br>farm lol.">
+    <img src="img/polar.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Snooze...<br>It's a curse<br>Wake up<br>Please...<br>Love<br>Future self">
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image-modal">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+
+
+  <a href="https://twitter.com/dovesar?lang=fr">
+    <i class="fab fa-twitter w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/ahung12/">
+    <i class="fab fa-linkedin-in w3-hover-opacity"></i>
+  </a>
+  <a href="https://github.com/doves777">
+    <i class="fab fa-github w3-hover-opacity"></i>
+  </a>
+  <a href="https://twitch.tv/dovsar">
+    <i class="fab fa-twitch w3-hover-opacity"></i>
+  </a>
+  <p class="w3-medium">Poems are original works of Andrew</p>
+  <p class="w3-medium">Images are from various sources</p>
+</footer>
+
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else {
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
